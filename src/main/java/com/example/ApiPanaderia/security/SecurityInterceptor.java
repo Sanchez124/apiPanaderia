@@ -64,7 +64,7 @@ public class SecurityInterceptor implements HandlerInterceptor {
 
         TokenSession session = sessionOpt.get();
 
-        if (session.getFechaExpiracion().isBefore(LocalDateTime.now())) {
+        if (session.getFechaExpiracion().before(new java.util.Date())) {
             tokenSessionRepository.delete(session);
             response.setStatus(HttpStatus.UNAUTHORIZED.value());
             response.setContentType("application/json");

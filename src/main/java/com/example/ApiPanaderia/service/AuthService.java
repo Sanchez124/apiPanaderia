@@ -39,7 +39,7 @@ public class AuthService {
                 token,
                 usuario.getUsername(),
                 usuario.getRol(),
-                LocalDateTime.now().plusHours(24)
+                new java.util.Date(System.currentTimeMillis() + 24L * 60 * 60 * 1000)
         );
 
         tokenSessionRepository.save(session);

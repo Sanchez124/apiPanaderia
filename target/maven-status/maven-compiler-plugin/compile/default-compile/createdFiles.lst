@@ -25,6 +25,7 @@ com\example\ApiPanaderia\controller\JornadaController$CerrarJornadaRequest.class
 com\example\ApiPanaderia\service\JornadaService.class
 com\example\ApiPanaderia\controller\AuthController$RegisterRequest.class
 com\example\ApiPanaderia\ApiPanaderiaApplication.class
+com\example\ApiPanaderia\config\GlobalExceptionHandler.class
 com\example\ApiPanaderia\controller\CategoriaController.class
 com\example\ApiPanaderia\model\TokenSession.class
 com\example\ApiPanaderia\repository\ProductoRepository.class

@@ -3,7 +3,7 @@ package com.example.ApiPanaderia.model;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.time.LocalDateTime;
+import java.util.Date;
 
 @Document(collection = "tokens")
 public class TokenSession {
@@ -12,11 +12,11 @@ public class TokenSession {
     private String id;
     private String username;
     private String rol;
-    private LocalDateTime fechaExpiracion;
+    private Date fechaExpiracion;
 
     public TokenSession() {}
 
-    public TokenSession(String id, String username, String rol, LocalDateTime fechaExpiracion) {
+    public TokenSession(String id, String username, String rol, Date fechaExpiracion) {
         this.id = id;
         this.username = username;
         this.rol = rol;
@@ -32,6 +32,7 @@ public class TokenSession {
     public String getRol() { return rol; }
     public void setRol(String rol) { this.rol = rol; }
 
-    public LocalDateTime getFechaExpiracion() { return fechaExpiracion; }
-    public void setFechaExpiracion(LocalDateTime fechaExpiracion) { this.fechaExpiracion = fechaExpiracion; }
+    public Date getFechaExpiracion() { return fechaExpiracion; }
+    public void setFechaExpiracion(Date fechaExpiracion) { this.fechaExpiracion = fechaExpiracion; }
 }
+
